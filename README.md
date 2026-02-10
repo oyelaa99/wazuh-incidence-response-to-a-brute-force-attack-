@@ -84,6 +84,8 @@ Next, link the command to a specific security event. Add the following configura
 
 To validate the configuration, a brute-force SSH attack is simulated from a remote host using `nmap`.
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7bbe54f3-226f-47dc-817d-2690c756bd0c" />
+
 ```bash
 nmap --script ssh-brute --script-args userdb=users.txt,passdb=passwords.txt -p 22 <target_ip>
 
@@ -102,7 +104,15 @@ As the attack progresses, Wazuh monitors authentication logs in real time.
 * **SIEM Dashboard**
 
   * Thousands of `Authentication failed` alerts appear.
+ 
+  * 
+    <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/68042024-6320-48be-8648-621e93826424" />
+
+
   * **Rule 651** confirms the Active Response module successfully executed the firewall block.
+ 
+  * 
+    <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d445a170-e0cb-4b7e-8083-45f18e788fc5" />
 
 * **Network Connectivity**
 
