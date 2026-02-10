@@ -85,9 +85,8 @@ Next, link the command to a specific security event. Add the following configura
 To validate the configuration, a brute-force SSH attack is simulated from a remote host using `nmap`.
 
 ```bash
-nmap --script ssh-brute \
-     --script-args userdb=users.txt,passdb=passwords.txt \
-     -p 22 <target_ip>
+nmap --script ssh-brute --script-args userdb=users.txt,passdb=passwords.txt -p 22 <target_ip>
+
 ```
 
 This command attempts multiple SSH login combinations using custom username and password lists.
